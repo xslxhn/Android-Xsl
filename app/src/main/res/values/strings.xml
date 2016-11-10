@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="NULL"> </string>
+    <string name="app_name">XslTest</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+    <string name="msave">修改</string>
+
+    <string name="c1">F00</string>
+    <string name="c2">0F0</string>
+    <string name="c3">00F</string>
+    <string name="c4">0FF</string>
+    <string name="c5">F0F</string>
+    <string name="c6">FF0</string>
+    <string name="c7">07F</string>
+    <string name="c8">70F</string>
+    <string name="c9">F70</string>
+
+    <!-- 按键定义 -->
+    <string name="Btn_Sensor">传感器</string>
+    <string name="Btn_Dialog">对话框</string>
+    <string name="Btn_DB">数据库</string>
+    <string name="Btn_Book">名片本</string>
+    <string name="Btn_Camera">照相机</string>
+    <string name="Btn_Picture">照片</string>
+    <string name="Btn_Timer">定时器</string>
+    <string name="Btn_Map">地图</string>
+    <string name="Btn_Video">视频</string>
+    <string name="Btn_AudioParse">音频解析</string>
+    <string name="Btn_GSM">电话短信</string>
+    <string name="Btn_ParaSave">参数存储</string>
+    <string name="Btn_Game">游戏</string>
+    <string name="Btn_Info">信息</string>
+    <string name="Btn_DownLoad">下载</string>
+    <string name="Btn_Return">返回</string>
+    <string name="Btn_NULL">NULL</string>
+
+    <!-- 参数保存文件名定义(SharedPreferences) -->
+    <string name="SharedPreferencesName">XSL_SPN</string>
+    <string name="SPN_UseCount">UseCount</string>
+    <string name="SPN_StartTime">StartTime</string>
+    <!-- 参数保存文件名定义(File) -->
+    <string name="FileName">XSL_FileName.bin</string>
+    <string name="SDFileName">/XSL_SDFileName.bin</string>
+    <!-- 游戏连连看定义 -->
+    <string name="hello">Hello World, Link!</string>
+    <string name="Game_Link_name">疯狂连连看</string>
+    <string name="game_time">剩余时间：</string>
+    <!-- 传感器 -->
+    <string name="txtLong">经度:</string>
+    <string name="txtLat">纬度:</string>
+    <string name="loc">定位</string>
+    <string name="lng">113.39</string>
+    <string name="lat">23.13</string>
+    <string name="satellite">卫星视图</string>
+    <string name="normal">普通视图</string>
+    <!-- 对话框 -->
+    <string name="Time">%1$02d:%2$02d</string>>
+    <string name="TimeDefault">08:24</string>>
+    <string name="TimePickerDialog_Canceled">时间对话框取消</string>>
+    <string name="Date">%1$04d/%2$02d/%3$02d</string>>
+    <string name="DateDefault">1982/08/24</string>>
+    <string name="DatePickerDialog_Canceled">日期对话框取消</string>>
+    <string name="ProgressDialog_OK">进度条对话框-确定键(%1$d%%)</string>>
+    <string name="ProgressDialog_Canceled">进度条对话框-取消键(%1$d%%)</string>>
+    <string name="ProgressDialog_Finish">进度条对话框-完成(%1$d%%)</string>>
+    <string name="Dialog_OK">对话框-确定键</string>>
+    <string name="Dialog_Canceled">对话框-取消键</string>>
+    <string name="AlertDialog_OK">报警对话框-确定键</string>>
+    <string name="AlertDialog_Canceled">报警对话框-取消键</string>>
+    <string name="AlertDialog_Neutral">报警对话框-中立键</string>>
+    <!-- 权限 -->
+    <string name="help">提示</string>
+    <string name="quit">退出应用</string>
+    <string name="settings">设置</string>
+    <string name="string_help_text">应用需要摄像及存储权限，如没有相应权限程序将无法正常使用。</string>
+    <string name="hour">小时</string>
+    <string name="minute">分钟</string>
+    <!-- Log服务器 -->
+    <string name="LogServiceNotification">Log Service通知</string>
+    <string name="LogServiceNotification_Running">运行中</string>
+</resources>

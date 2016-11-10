@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+		xmlns:android="http://schemas.android.com/apk/res/android"
+	        android:id="@+id/RelativeLayout02"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" >
+		
+			<ImageView 
+			android:padding="5dip"
+		
+	        android:id="@+id/faceImg" 
+		    android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" />
+		<LinearLayout 
+		    android:id="@+id/lila"
+			android:layout_toRightOf="@+id/faceImg"
+			android:orientation="vertical"
+		android:layout_weight="3" android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+		
+		<TextView 
+			
+			android:id="@+id/lblName" android:layout_width="fill_parent"
+			android:layout_height="fill_parent" android:textColor="#FFFFFFFF"
+			android:textSize="18px" android:layout_weight="1" />
+		<TextView 
+		
+		android:id="@+id/lblMobilePhone" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:textColor="#FFFFFFFF"
+			android:textSize="18px" android:layout_weight="1"  />
+
+	</LinearLayout>
+	<ImageView 
+	     android:visibility="gone"
+	      android:layout_alignParentRight="true"        
+	       android:id="@+id/checkImg" 
+	        android:background="@drawable/book_checkmark"
+		    android:layout_width="30px" 
+			android:layout_height="30px" />
+	</RelativeLayout>
+	

@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/TxtV_Main_UseCount"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/Btn_Sensor"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="Btn_SensorClickHandler"
+            android:text="@string/Btn_Sensor"
+            android:backgroundTint="@color/c2" />
+
+        <Button
+            android:id="@+id/Btn_DialogMain"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="Btn_DialogMainClickHandler"
+            android:text="@string/Btn_Dialog"
+            android:backgroundTint="@color/c2" />
+
+        <Button
+            android:id="@+id/BTN_VideoPause"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="Btn_SQLiteClickHandler"
+            android:text="@string/Btn_DB"
+            android:backgroundTint="@color/c1" />
+
+        <Button
+            android:id="@+id/Btn_Book"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="Btn_BookClickHandler"
+            android:text="@string/Btn_Book"
+            android:backgroundTint="@color/c6" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/BTN_VideoStart"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="Btn_CameraClickHandler"
+            android:text="@string/Btn_Camera"
+            android:backgroundTint="@color/c1" />
+
+        <Button
+            android:id="@+id/Btn_Picture"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="Btn_PictureClickHandler"
+            android:text="@string/Btn_Picture"
+            android:backgroundTint="@color/c6" />
+
+        <Button
+            android:id="@+id/Btn_Alarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="Btn_AlarmClickHandler"
+            android:text="@string/Btn_Timer"
+            android:backgroundTint="@color/c6" />
+
+        <Button
+            android:id="@+id/BTN_GOOGLE"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="Btn_GoogleMapHandler"
+            android:text="@string/Btn_Map"
+            android:backgroundTint="@color/c1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/BTN_Video"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="Btn_VideoClickHandler"
+            android:text="@string/Btn_Video"
+            android:backgroundTint="@color/c6" />
+
+        <Button
+            android:id="@+id/button13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="Btn_NetHandler"
+            android:text="网络"
+            android:backgroundTint="@color/c6" />
+
+        <Button
+            android:id="@+id/BTN_Speech"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="Btn_SpeechHandler"
+            android:text="朗读"
+            android:backgroundTint="@color/c6" />
+
+        <Button
+            android:id="@+id/BTN_Mp3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="Btn_Mp3ClickHandler"
+            android:text="音频"
+            android:backgroundTint="@color/c6" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/Btn_ShowIntent"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="显式INTENT"
+            android:textSize="10dp"
+            android:backgroundTint="@color/c6" />
+
+        <Button
+            android:id="@+id/Btn_HideIntent"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="隐式INTENT"
+            android:textSize="10dp"
+            android:backgroundTint="@color/c6" />
+
+        <Button
+            android:id="@+id/Btn_SysConfig"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="Btn_SysConfigClickHandler"
+            android:text="系统参数"
+            android:backgroundTint="@color/c6" />
+
+        <Button
+            android:id="@+id/Btn_Test1_11"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/Btn_GSM"
+            android:backgroundTint="@color/c1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:text="音频解析"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Btn_AudioParse"
+            android:layout_weight="1"
+            android:onClick="Btn_AudioParseClickHandler"
+            android:backgroundTint="@color/c2" />
+
+        <Button
+            android:id="@+id/Btn_Test1_21"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="Btn_ParaSaveHandler"
+            android:text="@string/Btn_ParaSave"
+            android:backgroundTint="@color/c6" />
+
+        <Button
+            android:id="@+id/Btn_Test1_12"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="Btn_GamePlaneHandler"
+            android:text="@string/Btn_Game"
+            android:backgroundTint="@color/c2" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp" >
+
+        <Button
+            android:id="@+id/Btn_CalPrime"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="Btn_CalPrimeHandler"
+            android:text="@string/Btn_Info"
+            android:backgroundTint="@color/c6" />
+
+        <Button
+            android:id="@+id/Btn_Async"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="Btn_AsyncHandler"
+            android:text="@string/Btn_DownLoad"
+            android:backgroundTint="@color/c6" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <EditText
+            android:id="@+id/textResult"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:ems="10"
+            android:focusable="false"
+            android:gravity="bottom" />
+
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="imageButton1ClickHandler"
+            android:src="@drawable/xsl_bmp"
+            android:scaleType="fitCenter"
+            android:contentDescription="NULL" />
+
+        <ImageView
+            android:id="@+id/imageView_Arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageButton1"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@id/imageButton1"
+            android:src="@drawable/arrow1" />
+
+    </RelativeLayout>
+
+</LinearLayout>
+

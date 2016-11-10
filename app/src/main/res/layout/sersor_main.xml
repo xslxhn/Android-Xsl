@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="bottom"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/Btn_ShowIntent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:onClick="Btn_ReturnMainClickHandler"
+        android:text="@string/Btn_Return"
+        android:layout_weight="0.07" />
+
+    <TextView
+        android:id="@+id/TXT_LIGHT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Btn_NULL"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/TXT_MAGNETIC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Btn_NULL"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/TXT_ACCELEROMETR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Btn_NULL"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/TXT_ORIENTATION"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Btn_NULL"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/TXT_PRESSURE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Btn_NULL"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/TXT_TEMPERATURE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Btn_NULL"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="12sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="185dp"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/imageView_Arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/znz"
+            android:contentDescription="@string/NULL" />
+    </LinearLayout>
+
+</LinearLayout>

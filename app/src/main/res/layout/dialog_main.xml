@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    Button
+        android:id="@+id/ButtonDialogOk"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="DialogOK_OnClickHandler"
+        android:text="Dialog Ok" />
+
+    <Button
+        android:id="@+id/ButtonDialogOkCancel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="DialogOkCancel_OnClickHandler"
+        android:text="Dialog Ok Cancel"
+        android:background="@android:color/holo_blue_bright" />
+
+    <Button
+        android:id="@+id/ButtonAlertDialogOkNeutralCancel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="AlertDialogOkNeutralCancel_OnClickHandler"
+        android:text="AlertDialog Ok Neutral Cancel"
+        android:background="@android:color/holo_blue_dark" />
+
+    <Button
+        android:id="@+id/ButtonAlertDialogList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="AlertDialogList_OnClickHandler"
+        android:text="AlertDialog List"
+        android:background="@android:color/holo_blue_light" />
+
+    <Button
+        android:id="@+id/ButtonProgressDialog"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="ProgressDialog_OnClickHandler"
+        android:text="ProgressDialog"
+        android:background="@android:color/holo_green_dark" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/Et_DatePickerDialog"
+            android:onClick="DatePickerDialogl_OnClickHandler"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/c6"
+            android:ems="10"
+            android:hint="输入日期"
+            android:layout_weight="1">
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/Et_TimePickerDialog"
+            android:onClick="TimePickerDialog_OnClickHandler"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/c6"
+            android:ems="10"
+            android:hint="输入时间"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:background="@color/c6"
+            android:ems="10"
+            android:hint="请输入密码"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:background="@color/c6"
+            android:ems="10"
+            android:hint="输入小数数据"
+            android:inputType="numberDecimal" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom" >
+
+        <EditText
+            android:id="@+id/textResult"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:ems="10"
+            android:focusable="false"
+            android:gravity="bottom" />
+    </RelativeLayout>
+
+</LinearLayout>

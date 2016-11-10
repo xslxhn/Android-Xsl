@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout android:orientation="horizontal"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/ShowImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="Btn_ShowImageClickHandler"
+            android:text="Show" >
+
+        </Button>
+
+        <Button
+            android:id="@+id/PrevImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="Btn_PrevImageClickHandler"
+            android:text="Prev" >
+
+        </Button>
+
+        <Button
+            android:id="@+id/NextImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="Btn_NextImageClickHandler"
+            android:text="Next" >
+
+        </Button>
+    </LinearLayout>
+    <TextView android:text=""
+              android:id="@+id/DisplayName"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+    </TextView>
+    <ImageView android:id="@+id/CurrentImage"
+               android:layout_width="fill_parent"
+               android:layout_height="fill_parent">
+    </ImageView>
+</LinearLayout>

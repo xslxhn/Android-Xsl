@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@color/c6"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/book_reserve5"
+    android:orientation="vertical"
+    android:padding="10dip" >
+
+		<!-- 带滚动条的上半部分信息 -->
+	<ScrollView 
+		android:id="@+id/ScrollView" android:layout_width="fill_parent"
+		android:scrollbars="vertical" android:layout_height="wrap_content"
+		android:layout_weight="4">
+
+		<LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="637dp"
+		    android:layout_marginLeft="10dp"
+		    android:layout_marginRight="10dp"
+		    android:orientation="vertical" >
+
+			<!-- 头像和姓名 -->
+			<LinearLayout 
+				android:orientation="horizontal" android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				>
+
+				<ImageButton
+				    android:id="@+id/imageBotton"
+				    android:layout_width="60px"
+				    android:layout_height="60px"
+				    android:padding="5px"
+				    android:scaleType="centerCrop"
+				    android:src="@drawable/book_image3" />
+
+				<EditText
+				    android:id="@+id/edtName"
+				    android:layout_width="240dip"
+				    android:layout_height="wrap_content"
+				    android:layout_marginTop="15dp"
+				    android:hint="姓名"
+				    android:tag="@android:attr/editTextBackground" />
+
+				<EditText
+				    android:id="@+id/edtBirthday"
+				    android:layout_width="240dip"
+				    android:layout_height="wrap_content"
+				    android:layout_marginTop="15dp"
+				    android:layout_weight="1"
+				    android:ems="10"
+				    android:focusable="false"
+				    android:hint="出生年月日"
+				    android:onClick="ClickHandler" />
+
+			</LinearLayout>
+
+			<!-- 手机 -->
+            <!-- 出生年月 -->
+
+			<TextView android:layout_width="wrap_content" android:text="手机:"
+				android:textSize="18dp" android:layout_height="32dp" />
+			<EditText android:id="@+id/edtMobilePhone" android:hint="手机"
+				android:phoneNumber="true" android:layout_width="fill_parent"
+				android:layout_height="wrap_content" />
+
+			<!--办公室电话 -->
+			<TextView android:layout_width="wrap_content" android:text="办公室电话："
+				android:textSize="18dp" android:layout_height="32dp" />
+			<EditText android:id="@+id/edtOfficePhone" android:hint="办公室电话"
+				android:phoneNumber="true" android:layout_width="fill_parent"
+				android:layout_height="wrap_content" />
+
+
+			<!--家庭电话 -->
+			<TextView android:layout_width="wrap_content" android:text="家庭电话:"
+				android:textSize="18dp" android:layout_height="32dp" />
+			<EditText android:id="@+id/edtHomePhone" android:hint="家庭电话"
+				android:phoneNumber="true" android:layout_width="fill_parent"
+				android:layout_height="wrap_content" />
+
+
+			<!--职务职称 -->
+			<TextView android:layout_width="wrap_content" android:text="职务职称:"
+				android:textSize="18dp" android:layout_height="30dp" />
+			<EditText android:id="@+id/edtJob" android:layout_width="fill_parent"
+				android:hint="职务职称" android:layout_height="wrap_content" />
+
+			<!-- 单位名称 -->
+			<TextView android:layout_width="wrap_content" android:text="单位名称:"
+				android:textSize="18dp" android:layout_height="32dp" />
+			<EditText android:id="@+id/edtCompany" android:hint="单位名称"
+				android:layout_width="fill_parent" android:layout_height="wrap_content" />
+		</LinearLayout>
+	</ScrollView>
+
+		<!--操作 -->
+		<LinearLayout 
+			android:orientation="horizontal" android:layout_width="fill_parent"
+			android:gravity="center_horizontal" android:layout_height="wrap_content">
+			<Button 
+			android:layout_weight="1"
+			android:layout_width="80dip" android:id="@+id/btnSave"
+				android:layout_height="wrap_content" android:text="@string/msave" />
+			<Button
+			android:layout_weight="1"
+			android:visibility="gone"
+			    android:id="@+id/btnDelete" 
+			    android:layout_width="80dip"
+				android:layout_height="wrap_content" 
+				android:text="删除" 
+				/>
+			<Button
+			android:layout_weight="1" 
+			android:id="@+id/btnStudentList" android:layout_width="80dip"
+				android:layout_height="wrap_content" android:text="返回" />
+		</LinearLayout>
+	</LinearLayout>
+
+
+
+
