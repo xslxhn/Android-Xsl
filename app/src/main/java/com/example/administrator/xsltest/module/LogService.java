@@ -125,7 +125,7 @@ public class LogService extends Service {
     public void onCreate() {
         super.onCreate();
         //
-        ModuleFile.init();
+        ModuleInit.init();
         //
         try {
             writer = new OutputStreamWriter(new FileOutputStream(
