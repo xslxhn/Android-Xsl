@@ -7,13 +7,14 @@
     android:installLocation="preferExternal">
 
     <!-- 声明权限 -->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <!-- 在SD中写数据权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <!-- 在SD中创建与删除权限 -->
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 通过访问CellID或Wifi获取位置信息 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 摄像头 -->
+    <uses-permission android:name="android.permission.CAMERA" />
     <!-- 联网权限 -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -29,8 +30,11 @@
     <uses-permission android:name="android.permission.READ_LOGS" />
     <!-- MonitorRunService -->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- Phone -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
     <!-- 基本属性 Begin-->
     <!-- allowBackup    是否可以通过adb命令进行备份整个应用数据 -->
     <!-- icon           声明应用程序图标 -->
@@ -70,13 +74,19 @@
         <service android:name=".module.MonitorRunService" />
         <!-- 指定Activity类名称 -->
         <activity android:name=".MainActivity">
+            <intent-filter>
+                <!-- 定义该Activity最先被启动 -->
+                <action android:name="android.intent.action.MAIN" />
+                <!-- 表明应用程序在上层的启动程序列表中显示 -->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name="SensorActivity" >
         </activity>
         <activity android:name=".DialogActivity"
             android:label="对话框测试" >
         </activity>
-        <activity android:name=".PermissionsActivity"
+        <activity android:name=".module.ModulePermissionsActivity"
             android:screenOrientation="portrait" >
         </activity>
         <activity android:name=".alarm.AlarmActivity" >
@@ -120,15 +130,13 @@
         <activity android:name=".book.StudentManagerActvity" >
         </activity>
         <activity
+            android:name=".TelephonyActivity"
+            android:label="电话短信">
+        </activity>
+        <activity
             android:label="音频声波"
             android:name=".AudioParseActivity"
             android:screenOrientation="landscape" >
-            <intent-filter>
-                <!-- 定义该Activity最先被启动 -->
-                <action android:name="android.intent.action.MAIN" />
-                <!-- 表明应用程序在上层的启动程序列表中显示 -->
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

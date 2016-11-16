@@ -125,8 +125,6 @@ public class LogService extends Service {
     public void onCreate() {
         super.onCreate();
         //
-        ModuleInit.init();
-        //
         try {
             writer = new OutputStreamWriter(new FileOutputStream(
                     ModuleFile.getFilePathString(ModuleFile.MEDIA_FILETYPE_LOG_SERVICE), true));

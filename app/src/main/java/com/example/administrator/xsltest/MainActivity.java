@@ -57,9 +57,7 @@ import xslPackage.XslTest.media.*;
 import xslPackage.XslTest.Game.Plane.PlaneGame;
 */
 //import android.media.audiofx.BassBoost.Settings;
-import android.Manifest;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.annotation.SuppressLint;
@@ -84,9 +82,9 @@ import com.example.administrator.xsltest.book.book_Main;
 import com.example.administrator.xsltest.camera.CameraActivity;
 import com.example.administrator.xsltest.media.UseMediaPlayerActivity;
 import com.example.administrator.xsltest.media.UseVideoViewActivity;
+import com.example.administrator.xsltest.module.ModuleInit;
 import com.example.administrator.xsltest.sqlite.ParaSaveActivity;
 import com.example.administrator.xsltest.sqlite.SQLiteActivity;
-import com.example.administrator.xsltest.module.PermissionsChecker;
 
 // 主活动
 public class MainActivity extends AppCompatActivity {
@@ -97,17 +95,6 @@ public class MainActivity extends AppCompatActivity {
     int currentImageId = 0;
     private ImageView show;
     private Handler ArrowHandler;
-    // --------------------权限
-    private PermissionsChecker mPermissionsChecker;
-    // 请求码
-    private static final int REQUEST_PERMISSIONS = 0;
-    // 所需的全部权限
-    static final String[] PERMISSIONS = new String[]{
-            Manifest.permission.READ_EXTERNAL_STORAGE,
-            Manifest.permission.WRITE_EXTERNAL_STORAGE,
-            Manifest.permission.ACCESS_COARSE_LOCATION
-    };
-    // --------------------
 
     // private static final int REQ_SYSTEM_SETTINGS=0;
     @SuppressLint("SimpleDateFormat")
@@ -118,8 +105,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         // 设置Activity持有的界面资源
         setContentView(R.layout.activity_main);
+        //
+        ModuleInit.init();
         // ----------以下为用户代码----------
-        mPermissionsChecker = new PermissionsChecker(this);
         Button button;
         int UseCount;
         TextView TxtV;
@@ -182,7 +170,6 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 // 发送空消息
                 ArrowHandler.sendEmptyMessage(0x1233);
-                // Log.v("XSL", "123");
             }
         }, 0, 100);
     }
@@ -280,6 +267,10 @@ public class MainActivity extends AppCompatActivity {
     public void Btn_DialogMainClickHandler(View v) {
         startActivity(new Intent(MainActivity.this, DialogActivity.class));
     }
+    // ---------------------------------------------Telephone
+    public void Btn_TelephoneHandler(View v) {
+        startActivity(new Intent(MainActivity.this, TelephonyActivity.class));
+    }
     // ---------------------------------------------音频解析
     public void Btn_AudioParseClickHandler(View v){
         startActivity(new Intent(MainActivity.this, AudioParseActivity.class));
@@ -305,11 +296,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (mPermissionsChecker.lacksPermissions(PERMISSIONS)) {
-                PermissionsActivity.startActivityForResult(this, REQUEST_PERMISSIONS, PERMISSIONS);
-            }
-        }
+        ModuleInit.onResume(this);
         //refreshDate();
     }
 

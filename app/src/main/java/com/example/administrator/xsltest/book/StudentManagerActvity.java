@@ -11,7 +11,6 @@ import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,12 +28,12 @@ import android.widget.ImageButton;
 import android.widget.ImageSwitcher;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
+import android.widget.Toast;
 import android.widget.ViewSwitcher.ViewFactory;
 
 import com.example.administrator.xsltest.R;
 import com.example.administrator.xsltest.book.biz.StudentManager;
 import com.example.administrator.xsltest.book.model.Student;
-import com.example.administrator.xsltest.book.tool.CommonUtil;
 
 public class StudentManagerActvity extends Activity implements ViewFactory {
 
@@ -159,13 +158,11 @@ public class StudentManagerActvity extends Activity implements ViewFactory {
 										boolean isOk = studentManager
 												.Delete(id);
 										if (isOk) {
-											CommonUtil.Alert(
-													StudentManagerActvity.this,
-													"删除成功!");
+											Toast.makeText(StudentManagerActvity.this,
+													"删除成功!", Toast.LENGTH_LONG).show();
 										} else {
-											CommonUtil.Alert(
-													StudentManagerActvity.this,
-													"删除失败!");
+											Toast.makeText(StudentManagerActvity.this,
+													"删除失败!", Toast.LENGTH_LONG).show();
 										}
 									}
 								}).setNegativeButton("取消", null).create()
@@ -193,8 +190,8 @@ public class StudentManagerActvity extends Activity implements ViewFactory {
 					if (MobilePhone.trim().equals("")
 							&& OfficePhone.trim().equals("")
 							&& HomePhone.trim().equals("")) {
-						CommonUtil.Alert(StudentManagerActvity.this,
-								"请至少填写一个联系方式!");
+						Toast.makeText(StudentManagerActvity.this,
+								"请至少填写一个联系方式!", Toast.LENGTH_LONG).show();
 						return;
 					}
 					String Job = edtJob.getText().toString();
@@ -230,13 +227,12 @@ public class StudentManagerActvity extends Activity implements ViewFactory {
 								Job, Company);
 					}
 					if (isok) {
-						CommonUtil.Alert(StudentManagerActvity.this,
-								"保存联系人信息成功!");
-
+						Toast.makeText(StudentManagerActvity.this,
+								"保存联系人信息成功!", Toast.LENGTH_LONG).show();
 						initUI();
 					} else {
-						CommonUtil.Alert(StudentManagerActvity.this,
-								"保存联系人信息失败!");
+						Toast.makeText(StudentManagerActvity.this,
+								"保存联系人信息失败!", Toast.LENGTH_LONG).show();
 					}
 				}
 			}

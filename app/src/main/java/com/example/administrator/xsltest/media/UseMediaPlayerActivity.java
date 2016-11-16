@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 
 import com.example.administrator.xsltest.R;
+import com.example.administrator.xsltest.module.LogUtils;
 
 public class UseMediaPlayerActivity extends Activity {
 	MediaPlayer mp = null;
@@ -25,15 +26,15 @@ public class UseMediaPlayerActivity extends Activity {
 				switch(what) {
 				// 未知错误
 				case MediaPlayer.MEDIA_ERROR_UNKNOWN:
-					Log.v("useMediaPlayer", "MEDIA_ERROR_UNKNOWN");
+					LogUtils.i("MEDIA_ERROR_UNKNOWN");
 					return true;
 				// 多媒体服务器停止
 				case MediaPlayer.MEDIA_ERROR_SERVER_DIED:
-					Log.v("useMediaPlayer", "MEDIA_ERROR_SERVER_DIED");
+					LogUtils.i("MEDIA_ERROR_SERVER_DIED");
 					return true;
 				// 多媒体数据异常
 				case MediaPlayer.MEDIA_ERROR_NOT_VALID_FOR_PROGRESSIVE_PLAYBACK:
-					Log.v("useMediaPlayer", "MEDIA_ERROR_NOT_VALID_FOR_PROGRESSIVE_PLAYBACK");
+					LogUtils.i("MEDIA_ERROR_NOT_VALID_FOR_PROGRESSIVE_PLAYBACK");
 					return true;
 				}
 				return false;
@@ -42,7 +43,7 @@ public class UseMediaPlayerActivity extends Activity {
 		//音频-->接收回调通知-->接收播放结束的通知
 		mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener(){
 			public void onCompletion(MediaPlayer mp){
-				Log.v("useMediaPlayer", "onCompletion");
+				LogUtils.i("onCompletion");
 				mp.seekTo(0); // 从头播放
 			}
 		});

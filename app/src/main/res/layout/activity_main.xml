@@ -168,12 +168,13 @@
             android:backgroundTint="@color/c6" />
 
         <Button
-            android:id="@+id/Btn_Test1_11"
+            android:id="@+id/Btn_Telephone"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="@string/Btn_GSM"
-            android:backgroundTint="@color/c1" />
+            android:onClick="Btn_TelephoneHandler"
+            android:backgroundTint="@color/c2" />
 
     </LinearLayout>
 

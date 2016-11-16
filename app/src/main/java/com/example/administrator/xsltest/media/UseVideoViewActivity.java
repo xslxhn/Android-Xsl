@@ -3,11 +3,11 @@ package com.example.administrator.xsltest.media;
 import android.app.Activity;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.VideoView;
 
 import com.example.administrator.xsltest.R;
+import com.example.administrator.xsltest.module.LogUtils;
 
 public class UseVideoViewActivity extends Activity {
 	VideoView vv = null;
@@ -32,16 +32,15 @@ public class UseVideoViewActivity extends Activity {
 				switch(what) {
 				// 未知错误
 				case MediaPlayer.MEDIA_ERROR_UNKNOWN:
-					Log.v("useVideoView", "MEDIA_ERROR_UNKNOWN");
+					LogUtils.i("MEDIA_ERROR_UNKNOWN");
 					return true;
 				// 多媒体服务器停止
 				case MediaPlayer.MEDIA_ERROR_SERVER_DIED:
-					Log.v("useVideoView", "MEDIA_ERROR_SERVER_DIED");
+					LogUtils.i("MEDIA_ERROR_SERVER_DIED");
 					return true;
 				// 多媒体数据异常
 				case MediaPlayer.MEDIA_ERROR_NOT_VALID_FOR_PROGRESSIVE_PLAYBACK:
-					Log.v("useVideoView", 
-						  "MEDIA_ERROR_NOT_VALID_FOR_PROGRESSIVE_PLAYBACK");
+					LogUtils.i("MEDIA_ERROR_NOT_VALID_FOR_PROGRESSIVE_PLAYBACK");
 					return true;
 				}
 				return false;
@@ -50,7 +49,7 @@ public class UseVideoViewActivity extends Activity {
 		//视频-->接收回调通知-->接收播放结束的通知
 		vv.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
 			public void onCompletion(MediaPlayer mp) {
-				Log.v("useVideoView", "onCompletion");
+				LogUtils.i("onCompletion");
 				vv.seekTo(0); // 从头播放
 			}
 		});

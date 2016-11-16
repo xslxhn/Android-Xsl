@@ -4,9 +4,7 @@
 package com.example.administrator.xsltest.book.biz;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -16,7 +14,7 @@ import android.database.sqlite.SQLiteDatabase;
 import com.example.administrator.xsltest.book.dao.DB;
 import com.example.administrator.xsltest.book.dao.StudentService;
 import com.example.administrator.xsltest.book.model.Student;
-import com.example.administrator.xsltest.book.tool.CommonUtil;
+import com.example.administrator.xsltest.module.LogUtils;
 
 public class StudentManager {
 	// 与下一层的接口
@@ -37,8 +35,7 @@ public class StudentManager {
 			dal.Insert(student);
 			return true;
 		} catch (SQLException e) {
-			CommonUtil
-					.Log_Error("book", "StudentManager-Add1" + e.getMessage());
+			e.printStackTrace();
 			return false;
 		}
 	}
@@ -53,8 +50,7 @@ public class StudentManager {
 			dal.Insert(student);
 			return true;
 		} catch (SQLException e) {
-			CommonUtil
-					.Log_Error("book", "StudentManager-Add2" + e.getMessage());
+			e.printStackTrace();
 			return false;
 
 		}
@@ -66,8 +62,7 @@ public class StudentManager {
 			dal.Update(student);
 			return true;
 		} catch (Exception e) {
-			CommonUtil.Log_Error("book",
-					"StudentManager-Modify" + e.getMessage());
+			e.printStackTrace();
 			return false;
 		}
 	}
@@ -82,8 +77,7 @@ public class StudentManager {
 			dal.Update(student);
 			return true;
 		} catch (SQLException e) {
-			CommonUtil.Log_Error("book",
-					"StudentManager-Modify" + e.getMessage());
+			e.printStackTrace();
 			return false;
 
 		}
@@ -95,8 +89,7 @@ public class StudentManager {
 			dal.Delete(id);
 			return true;
 		} catch (Exception e) {
-			CommonUtil.Log_Error("book",
-					"StudentManager-Delete" + e.getMessage());
+			e.printStackTrace();
 			return false;
 		}
 	}
@@ -105,7 +98,7 @@ public class StudentManager {
 	// 获取所有联系人列表
 	public List<Student> GetAllStudent() {
 		String condition = "1=1";
-		CommonUtil.Log_Info("book", "GetAllStudent");
+		LogUtils.i("GetAllStudent");
 		return this.GetStudentByCondition(condition);
 	}
 

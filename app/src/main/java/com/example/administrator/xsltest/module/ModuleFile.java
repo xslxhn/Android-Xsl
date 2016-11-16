@@ -17,7 +17,6 @@ import java.util.Date;
  */
 
 public class ModuleFile {
-    private static final String TAG = "ModuleFile";
     //
     public static final int MEDIA_FILETYPE_IMAGE = 1;
     public static final int MEDIA_FILETYPE_VIDEO = 2;
@@ -41,7 +40,7 @@ public class ModuleFile {
         if (!file.isDirectory()) {
             if (!file.mkdirs()) {
                 file.mkdirs();
-                Log.d(TAG, "failed to create directory, check if you have the WRITE_EXTERNAL_STORAGE permission");
+                LogUtils.i("failed to create directory, check if you have the WRITE_EXTERNAL_STORAGE permission");
             }
         }
         // 创建文件夹---SDCARD
@@ -50,7 +49,7 @@ public class ModuleFile {
             if (!file.isDirectory()) {
                 if (!file.mkdirs()) {
                     file.mkdirs();
-                    Log.d(TAG, "failed to create directory, check if you have the WRITE_EXTERNAL_STORAGE permission");
+                    LogUtils.i("failed to create directory, check if you have the WRITE_EXTERNAL_STORAGE permission");
                 }
             }
         }
@@ -62,7 +61,7 @@ public class ModuleFile {
                     file.createNewFile();
                 }
             } catch (IOException e) {
-                Log.e(TAG, e.getMessage(), e);
+                e.printStackTrace();
             }
         }
     }

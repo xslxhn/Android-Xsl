@@ -31,7 +31,9 @@ import com.example.administrator.xsltest.module.AppContext;
 import com.example.administrator.xsltest.module.ChartUtils;
 // MPAndroidChart库
 import com.example.administrator.xsltest.module.LogService;
+import com.example.administrator.xsltest.module.LogUtils;
 import com.example.administrator.xsltest.module.ModuleFile;
+import com.example.administrator.xsltest.module.ModuleInit;
 import com.example.administrator.xsltest.module.ModuleNotification;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
@@ -49,8 +51,6 @@ import java.util.List;
  */
 
 public class AudioParseActivity extends AppCompatActivity {
-    private static final String TAG = "AudioParseActivity";
-
     //
     private RelativeLayout mRelativeLayout;
     private boolean isPause = true;
@@ -79,7 +79,7 @@ public class AudioParseActivity extends AppCompatActivity {
                 textView1.setText(thresholdCount_1 + "");
             } else if (msg.what == 2) {
                 // 启动监测
-                Log.i(TAG, "onOptionsItemSelected: Press Start");
+                LogUtils.i("onOptionsItemSelected: Press Start");
                 isPause = !isPause;
                 if (isPause) {
                     menu1.findItem(R.id.menu_start).setIcon(android.R.drawable.ic_media_play);
@@ -124,6 +124,8 @@ public class AudioParseActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //
+        ModuleInit.init();
         setContentView(R.layout.activity_audio_parse);
         // 装载图表控件到相应容器
         mRelativeLayout = (RelativeLayout) findViewById(R.id.RL_AudioParse);
@@ -146,6 +148,8 @@ public class AudioParseActivity extends AppCompatActivity {
         //
         ModuleNotification.Init();
         ModuleNotification.notifyShow(0);
+        //
+        LogUtils.v("XslTest");
     }
     // 启动
     @Override
@@ -171,6 +175,8 @@ public class AudioParseActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        //
+        ModuleInit.onResume(this);
         //
         setContentView(R.layout.activity_audio_parse);
         // 装载图表控件到相应容器
@@ -374,7 +380,7 @@ public class AudioParseActivity extends AppCompatActivity {
         int i16;
         byte[] buf = new byte[2];
         if (lineChart.getXValCount() == 0) {
-            Log.i(TAG, "UtilToFile: NULL");
+            LogUtils.i("UtilToFile: NULL");
             return;
         }
         try {
@@ -386,7 +392,6 @@ public class AudioParseActivity extends AppCompatActivity {
             ILineDataSet dataSet = dataSets.get(0);
             for (int i = 0; i < dataSet.getEntryCount(); i++) {
                 float val = dataSet.getEntryForIndex(i).getVal();
-                //Log.i(TAG, "UtilToFile: XVal = " + val);
                 i16 = (int) val;
                 buf[0] = (byte) i16;
                 buf[1] = (byte) (i16 >> 8);
@@ -409,7 +414,7 @@ public class AudioParseActivity extends AppCompatActivity {
         File mediaStorageDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), "XslTest");
         File mediaFile = new File(mediaStorageDir.getPath() + File.separator + "REC.raw");
         if (mediaFile.length() == 0) {
-            Log.i(TAG, "FileToUtil: File null");
+            LogUtils.i("FileToUtil: File null");
             return;
         }
         // 装载参数

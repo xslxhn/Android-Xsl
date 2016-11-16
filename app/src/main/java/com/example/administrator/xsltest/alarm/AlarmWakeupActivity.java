@@ -28,7 +28,6 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.text.format.Time;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -43,9 +42,6 @@ public class AlarmWakeupActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.alarm_wakeup);
-
-		Log.i("@@@", "Called WakeupActivity onCreate");
-		
         Time t = new Time();
         t.setToNow();
 
@@ -69,8 +65,6 @@ public class AlarmWakeupActivity extends Activity {
 	@Override
 	protected void onStop() {
 		super.onStop();
-		Log.i("@@@", "Called WakeupActivity onStop");
-		
 		player.stop();
 		finish();
 	}

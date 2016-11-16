@@ -30,4 +30,35 @@
 		<item>疯狂Ajax讲义</item>
 		<item>疯狂Android讲义</item>
 	</string-array>
+	<!-- 定义字符串数组 -->
+	<string-array name="telephone_status_names">
+		<item>设备编号</item>
+		<item>软件版本</item>
+		<item>网络运营商代号</item>
+		<item>网络运营商名称</item>
+		<item>手机制式</item>
+		<item>设备当前位置</item>
+		<item>SIM卡的国别</item>
+		<item>SIM卡序列号</item>
+		<item>SIM卡状态</item>
+	</string-array>
+	<!-- 定义字符串数组 -->
+	<string-array name="phone_type">
+		<item>NONE</item>
+		<item>GSM</item>
+		<item>CDMA</item>
+		<item>SIP</item>
+	</string-array>
+	<!-- 定义字符串数组 -->
+	<string-array name="sim_state">
+		<item>UNKNOWN</item>
+		<item>ABSENT</item>
+		<item>PIN_REQUIRED</item>
+		<item>PUK_REQUIRED</item>
+		<item>NETWORK_LOCKED</item>
+		<item>READY</item>
+		<item>NOT_READY</item>
+		<item>PERM_DISABLED</item>
+		<item>CARD_IO_ERROR</item>
+	</string-array>
 </resources>

@@ -51,7 +51,6 @@ import android.database.sqlite.SQLiteDatabase;
 //import android.database.sqlite.SQLiteQueryBuilder;
 //import android.provider.BaseColumns;
 //import android.text.TextUtils;
-//import android.util.Log;
 
 public class DBManager {
 	

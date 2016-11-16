@@ -22,7 +22,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -377,7 +376,6 @@ public class NetActivity extends Activity
 			}
 			catch(Exception e)
 			{
-				Log.e("IOException","来自服务器的数据");
 				e.printStackTrace();
 			}
 		}

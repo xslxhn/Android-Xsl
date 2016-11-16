@@ -9,7 +9,7 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.example.administrator.xsltest.book.model.Student;
-import com.example.administrator.xsltest.book.tool.CommonUtil;
+import com.example.administrator.xsltest.module.LogUtils;
 
 /*
 import xslPackage.XslTest.book.model.Student;
@@ -58,7 +58,7 @@ public class StudentService {
 					student.getOfficePhone(), student.getHomePhone(),
 					student.getJob(), student.getCompany());
 			db.ExecuteSQL(sql);
-			CommonUtil.Log_Info("book", "copy:" + sql);
+			LogUtils.i("copy:" + sql);
 		}
 		cursor.close();
 	}
@@ -97,7 +97,7 @@ public class StudentService {
 					student.getOfficePhone(), student.getHomePhone(),
 					student.getJob(), student.getCompany());
 			db.ExecuteSQL(sql);
-			CommonUtil.Log_Info("book", "back:" + sql);
+			LogUtils.i("back:" + sql);
 		}
 		cursor.close();
 
@@ -110,7 +110,7 @@ public class StudentService {
 				student.getMobilePhone(), student.getOfficePhone(),
 				student.getHomePhone(), student.getJob(), student.getCompany());
 		db.ExecuteSQL(sql);
-		CommonUtil.Log_Info("book", "insert:" + sql);
+		LogUtils.i("insert:" + sql);
 	}
 
 	// 更新信息(用于修改)
@@ -121,28 +121,28 @@ public class StudentService {
 				student.getHomePhone(), student.getJob(), student.getCompany(),
 				student.getId());
 		db.ExecuteSQL(sql);
-		CommonUtil.Log_Info("book", "update:" + sql);
+		LogUtils.i("update:" + sql);
 	}
 
 	// 删除信息
 	public void Delete(int id) throws SQLException {
 		String sql = String.format(DB.TABLES.STUDENT.SQL.DELETE, id);
 		db.ExecuteSQL(sql);
-		CommonUtil.Log_Info("book", "delete:" + sql);
+		LogUtils.i("delete:" + sql);
 	}
 
 	// 删除所有信息
 	public void DeleteAll() throws SQLException {
 		String sql = String.format(DB.TABLES.STUDENT.SQL.DELETEALL);
-		db.ExecuteSQL(sql);		
-		CommonUtil.Log_Info("book", "DeleteAll:" + sql);
+		db.ExecuteSQL(sql);
+		LogUtils.i("DeleteAll:" + sql);
 	}
 	// 删除所有备份信息
 	public void DeleteAllCopy() throws SQLException {
 
 		String sql = String.format(DB.TABLES.STUDENT.SQL2.DELETEALL);
 		db.ExecuteSQL(sql);
-		CommonUtil.Log_Info("book", "DeleteBackAll:" + sql);
+		LogUtils.i("DeleteBackAll:" + sql);
 	}
 
 	// 查询主表(表名称,查询列,查询条件 ,查询条件的? ,查询出来的数据是否需要分组,聚合操作,排序 )
@@ -158,7 +158,7 @@ public class StudentService {
 				DB.TABLES.STUDENT.FIELD.HOMEPHONE, DB.TABLES.STUDENT.FIELD.JOB,
 				DB.TABLES.STUDENT.FIELD.COMPANY }, condition, null, null, null,
 				null);
-		CommonUtil.Log_Info("book", "Select:" + cursor);
+		LogUtils.i("Select:" + cursor);
 		return cursor;
 	}
 
@@ -175,7 +175,7 @@ public class StudentService {
 				DB.TABLES.STUDENT.FIELD.HOMEPHONE, DB.TABLES.STUDENT.FIELD.JOB,
 				DB.TABLES.STUDENT.FIELD.COMPANY }, condition, null, null, null,
 				null);
-		CommonUtil.Log_Info("book", "SelectBack:" + cursor);
+		LogUtils.i("SelectBack:" + cursor);
 		return cursor;
 	}
 
