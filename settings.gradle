@@ -1,1 +1,2 @@
-include ':app'
+include ':app', ':xsl-common'
+project(':xsl-common').projectDir = new File('common')

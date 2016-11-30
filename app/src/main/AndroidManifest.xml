@@ -35,6 +35,10 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- Bluetooth -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED" />
     <!-- 基本属性 Begin-->
     <!-- allowBackup    是否可以通过adb命令进行备份整个应用数据 -->
     <!-- icon           声明应用程序图标 -->
@@ -73,13 +77,15 @@
         <service android:name=".module.LogService" />
         <service android:name=".module.MonitorRunService" />
         <!-- 指定Activity类名称 -->
-        <activity android:name=".MainActivity">
+        <activity android:name=".module.ModuleSplashscreenActivity">
             <intent-filter>
                 <!-- 定义该Activity最先被启动 -->
                 <action android:name="android.intent.action.MAIN" />
                 <!-- 表明应用程序在上层的启动程序列表中显示 -->
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity">
         </activity>
         <activity android:name="SensorActivity" >
         </activity>
@@ -138,6 +144,12 @@
             android:name=".AudioParseActivity"
             android:screenOrientation="landscape" >
         </activity>
+
+        <activity android:name=".nrftoolbox.csc.CSCActivity" >
+        </activity>
+        <service
+            android:name=".nrftoolbox.csc.CSCService"
+            android:label="@string/csc_feature_title" />
     </application>
 
 </manifest>

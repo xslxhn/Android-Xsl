@@ -125,7 +125,6 @@ public class AudioParseActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //
-        ModuleInit.init();
         setContentView(R.layout.activity_audio_parse);
         // 装载图表控件到相应容器
         mRelativeLayout = (RelativeLayout) findViewById(R.id.RL_AudioParse);
@@ -175,8 +174,6 @@ public class AudioParseActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        //
-        ModuleInit.onResume(this);
         //
         setContentView(R.layout.activity_audio_parse);
         // 装载图表控件到相应容器

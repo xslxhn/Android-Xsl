@@ -43,6 +43,10 @@ public class ModuleInit {
             Manifest.permission.READ_PHONE_STATE,
             Manifest.permission.SEND_SMS,
             Manifest.permission.CALL_PHONE,
+            // bluetooth
+            Manifest.permission.BLUETOOTH,
+            Manifest.permission.BLUETOOTH_ADMIN,
+            //Manifest.permission.BLUETOOTH_PRIVILEGED
     };
     public static void init(){
         if(runFlag)

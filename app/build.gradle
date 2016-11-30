@@ -4,7 +4,7 @@ android {
     // 确定安装Android API 24
     compileSdkVersion 24
     // 确定安装Android sdk build-tool 24.0.1
-    buildToolsVersion "24.0.1"
+    buildToolsVersion '25.0.0'
     //-----XSL(仓位包)
     // 用于MPAndroidChart
     repositories {
@@ -38,14 +38,21 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:24.2.1'
     testCompile 'junit:junit:4.12'
-    //-----XSL-----用于MPAndroidChart
+    //-----XSL-----
+    // 用于MPAndroidChart
     compile 'com.github.PhilJay:MPAndroidChart:v2.2.4'
+    // 用于nordic的
+    compile 'com.android.support:appcompat-v7:24.0.0'
+    compile 'com.android.support:design:24.0.0'
+    compile 'no.nordicsemi.android:log:2.0.0'
+    compile 'no.nordicsemi.android.support.v18:scanner:0.2.0'
     //-------------
     compile 'com.j256.ormlite:ormlite-android:4.48'
+    compile project(':xsl-common')
 }

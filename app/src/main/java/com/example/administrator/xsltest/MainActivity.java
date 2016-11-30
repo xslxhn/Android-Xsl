@@ -63,6 +63,7 @@ import android.os.Handler;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -82,7 +83,9 @@ import com.example.administrator.xsltest.book.book_Main;
 import com.example.administrator.xsltest.camera.CameraActivity;
 import com.example.administrator.xsltest.media.UseMediaPlayerActivity;
 import com.example.administrator.xsltest.media.UseVideoViewActivity;
+import com.example.administrator.xsltest.module.LogUtils;
 import com.example.administrator.xsltest.module.ModuleInit;
+import com.example.administrator.xsltest.nrftoolbox.csc.CSCActivity;
 import com.example.administrator.xsltest.sqlite.ParaSaveActivity;
 import com.example.administrator.xsltest.sqlite.SQLiteActivity;
 
@@ -105,8 +108,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         // 设置Activity持有的界面资源
         setContentView(R.layout.activity_main);
-        //
-        ModuleInit.init();
         // ----------以下为用户代码----------
         Button button;
         int UseCount;
@@ -275,6 +276,10 @@ public class MainActivity extends AppCompatActivity {
     public void Btn_AudioParseClickHandler(View v){
         startActivity(new Intent(MainActivity.this, AudioParseActivity.class));
     }
+    // ---------------------------------------------游戏-飞机
+    public void Btn_BluetoothHandler(View v) {
+        startActivity(new Intent(MainActivity.this, CSCActivity.class));
+    }
     // ---------------------------------------------图片按钮-->图片切换
     public void imageButton1ClickHandler(View v) {
         if (i == 0) {
@@ -296,8 +301,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        ModuleInit.onResume(this);
-        //refreshDate();
     }
 
     @Override
