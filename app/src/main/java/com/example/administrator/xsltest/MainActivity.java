@@ -85,7 +85,18 @@ import com.example.administrator.xsltest.media.UseMediaPlayerActivity;
 import com.example.administrator.xsltest.media.UseVideoViewActivity;
 import com.example.administrator.xsltest.module.LogUtils;
 import com.example.administrator.xsltest.module.ModuleInit;
+import com.example.administrator.xsltest.nrftoolbox.bpm.BPMActivity;
+import com.example.administrator.xsltest.nrftoolbox.cgms.CGMSActivity;
 import com.example.administrator.xsltest.nrftoolbox.csc.CSCActivity;
+import com.example.administrator.xsltest.nrftoolbox.dfu.DfuActivity;
+import com.example.administrator.xsltest.nrftoolbox.gls.GlucoseActivity;
+import com.example.administrator.xsltest.nrftoolbox.hrs.HRSActivity;
+import com.example.administrator.xsltest.nrftoolbox.hts.HTSActivity;
+import com.example.administrator.xsltest.nrftoolbox.proximity.ProximityActivity;
+import com.example.administrator.xsltest.nrftoolbox.rsc.RSCActivity;
+import com.example.administrator.xsltest.nrftoolbox.sample.SampleActivity;
+import com.example.administrator.xsltest.nrftoolbox.template.TemplateActivity;
+import com.example.administrator.xsltest.nrftoolbox.uart.UARTActivity;
 import com.example.administrator.xsltest.sqlite.ParaSaveActivity;
 import com.example.administrator.xsltest.sqlite.SQLiteActivity;
 
@@ -276,9 +287,42 @@ public class MainActivity extends AppCompatActivity {
     public void Btn_AudioParseClickHandler(View v){
         startActivity(new Intent(MainActivity.this, AudioParseActivity.class));
     }
-    // ---------------------------------------------游戏-飞机
+    // ---------------------------------------------蓝牙
     public void Btn_BluetoothHandler(View v) {
+        startActivity(new Intent(MainActivity.this, SampleActivity.class));
+    }
+    public void Btn_Bluetooth1Handler(View v) {
+        startActivity(new Intent(MainActivity.this, GlucoseActivity.class));
+    }
+    public void Btn_Bluetooth2Handler(View v) {
+        startActivity(new Intent(MainActivity.this, BPMActivity.class));
+    }
+    public void Btn_Bluetooth3Handler(View v) {
+        startActivity(new Intent(MainActivity.this, CGMSActivity.class));
+    }
+    public void Btn_Bluetooth4Handler(View v) {
         startActivity(new Intent(MainActivity.this, CSCActivity.class));
+    }
+    public void Btn_Bluetooth5Handler(View v) {
+        startActivity(new Intent(MainActivity.this, DfuActivity.class));
+    }
+    public void Btn_Bluetooth6Handler(View v) {
+        startActivity(new Intent(MainActivity.this, HRSActivity.class));
+    }
+    public void Btn_Bluetooth7Handler(View v) {
+        startActivity(new Intent(MainActivity.this, HTSActivity.class));
+    }
+    public void Btn_Bluetooth8Handler(View v) {
+        startActivity(new Intent(MainActivity.this, ProximityActivity.class));
+    }
+    public void Btn_Bluetooth9Handler(View v) {
+        startActivity(new Intent(MainActivity.this, RSCActivity.class));
+    }
+    public void Btn_Bluetooth10Handler(View v) {
+        startActivity(new Intent(MainActivity.this, TemplateActivity.class));
+    }
+    public void Btn_Bluetooth11Handler(View v) {
+        startActivity(new Intent(MainActivity.this, UARTActivity.class));
     }
     // ---------------------------------------------图片按钮-->图片切换
     public void imageButton1ClickHandler(View v) {

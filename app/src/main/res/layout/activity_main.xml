@@ -210,22 +210,6 @@
             android:text="@string/Btn_Game" />
 
         <Button
-            android:id="@+id/btn_main_bluetooth"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:backgroundTint="@android:color/holo_blue_bright"
-            android:onClick="Btn_BluetoothHandler"
-            android:text="@string/Btn_Bluetooth" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="0dp">
-
-        <Button
             android:id="@+id/Btn_CalPrime"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -243,6 +227,126 @@
             android:onClick="Btn_AsyncHandler"
             android:text="@string/Btn_DownLoad" />
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp">
+
+        <Button
+            android:id="@+id/btn_main_bluetooth"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/holo_blue_bright"
+            android:onClick="Btn_BluetoothHandler"
+            android:text="@string/Btn_Bluetooth" />
+
+        <Button
+            android:id="@+id/btn_main_bluetooth1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/holo_blue_bright"
+            android:onClick="Btn_Bluetooth1Handler"
+            android:text="BGM" />
+
+        <Button
+            android:id="@+id/btn_main_bluetooth2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/holo_blue_bright"
+            android:onClick="Btn_Bluetooth2Handler"
+            android:text="BPM" />
+
+        <Button
+            android:id="@+id/btn_main_bluetooth3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/holo_blue_bright"
+            android:onClick="Btn_Bluetooth3Handler"
+            android:text="CGMS" />
+
+        <Button
+            android:id="@+id/btn_main_bluetooth4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/holo_blue_bright"
+            android:onClick="Btn_Bluetooth4Handler"
+            android:text="CSC" />
+
+        <Button
+            android:id="@+id/btn_main_bluetooth5"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/holo_blue_bright"
+            android:onClick="Btn_Bluetooth5Handler"
+            android:text="DFU" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp">
+
+        <Button
+            android:id="@+id/btn_main_bluetooth6"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/holo_blue_bright"
+            android:onClick="Btn_Bluetooth6Handler"
+            android:text="HRM" />
+
+        <Button
+            android:id="@+id/btn_main_bluetooth7"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/holo_blue_bright"
+            android:onClick="Btn_Bluetooth7Handler"
+            android:text="HTM" />
+
+        <Button
+            android:id="@+id/btn_main_bluetooth8"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/holo_blue_bright"
+            android:onClick="Btn_Bluetooth8Handler"
+            android:text="PROXIMITY" />
+
+        <Button
+            android:id="@+id/btn_main_bluetooth9"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/holo_blue_bright"
+            android:onClick="Btn_Bluetooth9Handler"
+            android:text="RSC" />
+
+        <Button
+            android:id="@+id/btn_main_bluetooth10"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/holo_blue_bright"
+            android:onClick="Btn_Bluetooth10Handler"
+            android:text="TEMPLATE" />
+
+        <Button
+            android:id="@+id/btn_main_bluetooth11"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/holo_blue_bright"
+            android:onClick="Btn_Bluetooth11Handler"
+            android:text="UART" />
     </LinearLayout>
 
     <RelativeLayout
